@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script src="1.js"></script>
+  </head>
+  <body>
+    <h1>Regiseration Form</h1>
+
+    <div>
+      firstname <input type="text" name="" id="firstname" required />
+    </div>
+
+    <div style="margin-top: 8px">
+      lastname <input type="text" name="" id="lastname" required />
+    </div>
+
+    <div style="margin-top: 8px">
+      Email <input type="text" name="" id="email" required />
+    </div>
+
+    <div style="margin-top: 8px">
+      Mobile <input type="text" name="" id="mobile" required />
+    </div>
+
+    <div>
+        password <input type="password" name="" id="passwd" required />
+      </div>
+
+    <div>
+      <input
+        type="button"
+        value="Register GET"
+        onclick="registerUserVer1()"
+      />
+
+      <input
+        type="button"
+        value="Register POST"
+        onclick="registerUsingPost()"
+      />
+    </div>
+  </body>
+</html>
