@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+     <div class="row" style="height: 100vh;">
+
+        <div class="col-5 bg-info d-flex flex-column justify-content-center align-items-center bg-img">
+            <div style="font-size: 80px; color: red; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                <b>Quora</b>
+            </div>
+            <div style="font-size: 18px;">
+                <b>A place to share knowledge and better understand the world</b>
+            </div>
+        </div>
+
+        <div class="col-7 bg-secondary d-flex flex-column justify-content-center align-items-center bg-img-2 was-validated" [formGroup]="fbFormGroup">
+            <div style="background-color: rgba(255, 255, 255, 0.568);">
+            <div class="margin" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <div style="margin-right: 10px;">
+                    <label for="fName" >FirstName</label>
+                    <input type="text" class="form-control is-invalid" id="fName" placeholder="FirstName" formControlName="firstname" required >
+                </div>
+                <div>
+                    <label for="lName" >LastName</label>
+                    <input type="text" class="form-control is-invalid" id="lName" placeholder="LastName" formControlName="lastname" required >
+                </div>
+            </div>
+            <div class="margin" style="margin-bottom: 10px; width: 25vw;">
+                <label for="email" >Email</label>
+                <input type="email" class="form-control is-invalid" id="email" placeholder="Email" formControlName="email" required>
+                <div class="invalid-feedback">Please enter valid email-id</div>
+            </div>
+            <div class="margin" style="margin-bottom: 10px; width: 25vw;">
+                <label for="phno" >Phone Number</label>
+                <input type="text" class="form-control is-invalid" id="phno" placeholder="Phone number" formControlName="mobile" required>
+            </div>
+            <div class="margin" style="margin-bottom: 20px; width: 25vw;">
+                <label for="Password" >Password</label>
+                <input type="password" class="form-control is-invalid" id="Password" placeholder="Password" formControlName="passwd" required>
+                <div class="invalid-feedback">Password length should be min 6 characters</div>
+            </div>
+            <div class="margin" style=" margin-left: 35%; margin-bottom: 25px;">
+                <button class="btn btn-danger" [disabled]="!fbFormGroup.valid" (click)="register()">Register</button>
+            </div>
+            <div class="margin" style="color: red; margin-bottom: 15px; ">
+                Already Registered? <a routerLink="/loginpage"> <b>Login!</b> </a>
+            </div>
+            </div>
+        </div>
+
+     </div>
+
+</div>

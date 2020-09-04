@@ -1,0 +1,38 @@
+<div class="container-fluid">
+
+    <div class="row" style="height: 100vh;">
+
+            <div class="col-6 bg-warning d-flex flex-column justify-content-center align-items-center bg-img">
+                <div>
+                    <div style="font-size: 90px; color: red;"> <b>Quora</b> </div>
+                    <div style="font-size: 20px; color: orangered;"> <b>A place to share knowledge and better understand the world</b> </div>
+                </div>
+            </div>
+
+            <div class="bg-img-2 col-6 bg-secondary d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup">
+
+                <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    Please check your Email and Password..!
+                </div>
+            
+                <div style="width: 25vw; margin-bottom: 10px;">
+                    <input type="text" class="form-control" id="" placeholder="Email" formControlName="email" required>
+                </div>
+                <div style="width: 25vw; margin-bottom: 10px;">
+                    <input type="Password" class="form-control" id="" placeholder="Password" formControlName="passwd" required>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="button" class="btn btn-warning" [disabled]="!fbFormGroup.valid" (click)="login()" value="Login" style="width: 15vw;">
+                </div>
+
+                <div style="color: whitesmoke;">
+                    Not a Member? <a routerLink="/register"> <b>Register Here!</b> </a>
+                </div>
+                <div style="margin-top: 10px;">
+                    <a routerLink="/forgetpass" style="color: cornsilk;">Forgot Password</a>
+                </div>
+            </div>
+
+    </div>
+
+</div>

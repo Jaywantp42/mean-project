@@ -1,0 +1,18 @@
+.bg-img{
+    background: url("/assets/books.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-img-2{
+    background: url("/assets/question.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.margin{
+    margin-left: 10px;
+    margin-right: 10px;
+}

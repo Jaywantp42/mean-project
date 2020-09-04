@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+    <div class="row bg-danger">
+
+        <div class="col-3 d-flex align-items-center" style="color: white; font-size: 26px;">
+            <b>Quora</b>
+        </div>
+        <div class="col-7">
+
+        </div>
+        <div class="col-1 d-flex align-items-center">
+            <a routerLink="/pgnotfound" style="text-decoration: none; color: blanchedalmond;">Settings</a>
+        </div>
+        <div class="col-1 d-flex align-items-center">
+            <button class="btn btn-secondary btn-sm" (click)="logOut()">Log out</button>
+        </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-6" ng-app="">
+            <div class="row bg-light shadow-lg justify-content-center align-items-center mt-3" style="height: 200px;" [formGroup]="fbFormGroup">
+               <!-- <input type="text" class="mt-2 ml-3" formControlName="qnum" > -->
+                <input type="text" class="ml-4 mr-4 mt-5"style="width: 100%; outline:none; border:none; border-bottom: 1px solid rgb(57, 175, 243);" placeholder="Type of Question" formControlName="cat" />
+                <input type="text" class="ml-4 mr-4 mt-4"style="width: 100%; outline:none; border:none; border-bottom: 1px solid rgb(57, 175, 243);" placeholder="Enter Question" formControlName="quee" [formControl]="q" />
+                <button class="btn-info" (click)="addQue()">ADD Question</button>
+            </div>
+
+            <div class="row bg-light shadow-lg justify-content-center align-items-center mt-3" style="height: 200px;" *ngFor="let item of list">
+                {{item.quee}}
+            </div>
+
+        </div>
+    </div>
+
+</div>
